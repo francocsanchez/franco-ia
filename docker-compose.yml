@@ -1,0 +1,20 @@
+services:
+  franco-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: franco-ai
+    environment:
+      PORT: ${PORT:-4000}
+      OLLAMA_URL: ${OLLAMA_URL:-http://ollama:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2:3b}
+    ports:
+      - "4000:4000"
+    restart: unless-stopped
+    networks:
+      - ollama_network
+
+networks:
+  ollama_network:
+    external: true
+    name: ollama_default
