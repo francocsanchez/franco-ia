@@ -1,8 +1,6 @@
 services:
   franco-ai:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/francocsanchez/franco-ai:latest
     container_name: franco-ai
     environment:
       PORT: ${PORT:-4000}

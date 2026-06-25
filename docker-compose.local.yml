@@ -1,0 +1,6 @@
+services:
+  franco-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: franco-ai:local
