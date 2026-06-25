@@ -23,7 +23,11 @@ Crear un archivo `.env` a partir de `.env.example`.
 PORT=4000
 OLLAMA_URL=http://ollama:11434
 OLLAMA_MODEL=llama3.2:3b
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_ALLOWED_CHAT_IDS=
 ```
+
+`TELEGRAM_ALLOWED_CHAT_IDS` acepta una lista separada por comas. Si queda vacia, el bot permite todos los chats.
 
 ## Instalacion local
 
